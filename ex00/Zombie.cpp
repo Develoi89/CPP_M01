@@ -9,6 +9,10 @@ Zombie::Zombie(std::string name)
 {
     Name = name;
 }
+Zombie::~Zombie(void)
+{
+    return;
+}
 
 void Zombie::announce(void)
 {

@@ -1,11 +1,9 @@
 
 NAME		=	test
 
-SRC			=	Zombie.cpp\
-				ZombieHorde.cpp\
-				main.cpp
+SRC			=	main.cpp
 
-HDS			=	Zombie.hpp		
+HDS			=			
 
 OBJ			=	$(SRC:.cpp=.o)
 
