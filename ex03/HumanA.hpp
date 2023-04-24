@@ -11,10 +11,10 @@ class HumanA
         std::string name;
         Weapon      &weapon;
     public:
-        HumanA(std::string str, Weapon &weapon);
+        HumanA(std::string str, Weapon &wpn);
         ~HumanA();
         void attack();
-        void setWeapon(Weapon);
+        void setWeapon(Weapon &wpn);
 };
 
 # endif

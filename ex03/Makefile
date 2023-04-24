@@ -1,9 +1,14 @@
 
 NAME		=	test
 
-SRC			=	main.cpp
+SRC			=	main.cpp\
+				HumanA.cpp\
+				HumanB.cpp\
+				Weapon.cpp
 
-HDS			=			
+HDS			=	HumanA.hpp\
+				HumanB.hpp\
+				Weapon.hpp
 
 OBJ			=	$(SRC:.cpp=.o)
 
