@@ -17,7 +17,7 @@ $(NAME)		:	$(OBJ)
 all			:	$(NAME)
 
 clean		:
-		@rm -rf
+		@rm -rf testfile.replace
 
 fclean		:	clean
 		@rm -rf $(NAME) $(OBJ)
