@@ -15,6 +15,11 @@ int main(void)
     std::cout << "Type the name of file to modificate:" << std::endl;
     std::getline (std::cin, file);
     std::ifstream tmp(file);
+    if (!tmp.is_open())
+        {
+          std::cout <<"Error al abrir " << file << "\n";
+          exit(EXIT_FAILURE);
+        }
     std::ofstream rtn("testfile.replace");
     std::cout << "Type the characters that will be replaced:" << std::endl;
     std::getline (std::cin, s1);
@@ -50,4 +55,5 @@ int main(void)
             }
         }
     }
+    
 }
