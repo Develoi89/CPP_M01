@@ -22,15 +22,27 @@ int main(void)
     while (tmp)
     {
         std::getline (tmp, str);
-        i = str.find(s1);
-        if(i > 0)
+        i = 1;
+        while(i > 0)
         {
-            for(aux = 0; aux < i; aux++)
-                rtn << str[aux];
-            rtn << s2;
-            rtn << str[i + s1.size()] << std::endl;
+            i = str.find(s1);
+            if(i > 0)
+            {
+                for(aux = 0 ;aux < i; aux++)
+                    rtn << str[aux];
+                rtn << s2;
+                aux += s1.size();
+                str = str.substr(aux);
+            }
+            else
+            {
+                if(str.size())
+                    rtn << str << std::endl;
+                else
+                    rtn << std::endl;
+                str = "";
+                break;
+            }
         }
-        else
-            rtn << str << std::endl;
     }
 }
