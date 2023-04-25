@@ -10,6 +10,7 @@ int main(void)
     std::string str;
     int         i;
     int         aux;
+    int         flag = 0;
 
     std::cout << "Type the name of file to modificate:" << std::endl;
     std::getline (std::cin, file);
@@ -19,11 +20,18 @@ int main(void)
     std::getline (std::cin, s1);
     std::cout << "Type the new characters that will be replace the old:" << std::endl;
     std::getline (std::cin, s2);
+
     while (tmp)
     {
         std::getline (tmp, str);
-        i = 1;
-        while(i > 0)
+        if(str.size() == 0)
+            break;
+        if(flag == 0)
+            flag = 1;
+        else
+            rtn << std::endl;
+        i = 0;
+        while(42)
         {
             i = str.find(s1);
             if(i > 0)
@@ -36,10 +44,7 @@ int main(void)
             }
             else
             {
-                if(str.size())
-                    rtn << str << std::endl;
-                else
-                    rtn << std::endl;
+                rtn << str;
                 str = "";
                 break;
             }
