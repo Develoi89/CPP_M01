@@ -22,11 +22,21 @@ void Harl::warning( void )
 {
     std::cout << "I think I deserve to have some extra bacon for free. I’ve been coming for years whereas you started working here since last month." << std::endl;
 }
-void error( void )
+void Harl::error( void )
 {
     std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
-void complain( std::string level )
+void Harl::complain( std::string level )
 {
-    
+    int         i;
+    std::string str[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+    void (Harl::*f[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+    for(i = 0; i < 4; i++)
+        if(level.compare(str[i]) == 0)
+        {
+            (this->*f[i])();
+            break;
+        }
+    if(i == 4)
+        std::cout << "compailing for nothing" << std::endl;
 }
