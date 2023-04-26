@@ -39,7 +39,7 @@ int main(void)
         while(42)
         {
             i = str.find(s1);
-            if(i > 0)
+            if(i >= 0)
             {
                 for(aux = 0 ;aux < i; aux++)
                     rtn << str[aux];

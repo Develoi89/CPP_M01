@@ -12,7 +12,7 @@ Zombie::Zombie(std::string name)
 
 Zombie::~Zombie(void)
 {
-    return;
+    std::cout << Name << ": deleted..." << std::endl;
 }
 
 void Zombie::announce(void)
